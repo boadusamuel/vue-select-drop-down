@@ -1,0 +1,16 @@
+{
+  "name": "zselectdropdown",
+  "version": "1.0.0",
+  "description": "vue select dropdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "select",
+    "drop",
+    "down"
+  ],
+  "author": "samuel boadu",
+  "license": "ISC"
+}
