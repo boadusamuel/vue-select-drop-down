@@ -55,11 +55,11 @@ export default {
   props: {
     shouldOpen: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     setDropdownPlaceholder: {
       type: String,
-      default: 'hello guys',
+      default: '',
     },
     dropDownWidth: {
       type: String,
@@ -68,7 +68,7 @@ export default {
     options: {
       type: Array,
       default() {
-        return ['orange', 'fufu']
+        return []
       },
     },
     arrayOfObjects: {
