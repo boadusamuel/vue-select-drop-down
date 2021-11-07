@@ -1,7 +1,6 @@
 <template>
   <div>
     <button
-      :id="id"
       class="
         form-control
         select-input
@@ -35,54 +34,61 @@ export default {
   name: 'ZSelect',
   components: { dropDown },
   props: {
+    // Placeholder of input field
     setPlaceholder: {
       type: String,
       default: '',
     },
+    // Set width of drop down list
     dropDownWidth: {
       type: String,
       default: '',
     },
-    id: {
-      type: String,
-      default: '',
-    },
+    // Set width of select button
     setWidth: {
       type: String,
       default: '350px',
     },
+    // Display or hide drop down list 
     shouldOpen: {
       type: Boolean,
       default: false,
     },
+    // Placeholder for drop down
     setDropdownPlaceholder: {
       type: String,
       default: '',
     },
+    // Items in array
     options: {
       type: Array,
       default() {
         return []
       },
     },
+    // Items(object) in array
     arrayOfObjects: {
       type: Array,
       default() {
         return []
       },
     },
+    // Removes bottom margin of drop down list
     removeBottomMargin: {
       type: Boolean,
       default: false,
     },
   },
+  // Toggle drop down list
   methods: {
     handleDropDownOptions() {
       this.$emit('showDropDown')
     },
+    // Hide drop down list when select button is not in focus
     checkBlur() {
       this.$emit('blur')
     },
+    // Event emiited upon selection from drop down
     handleDropDownSelected(data) {
       return this.$emit('selected', data)
     },
